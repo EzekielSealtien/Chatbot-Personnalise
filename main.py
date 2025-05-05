@@ -107,7 +107,6 @@ if st.button("Traitement du document", key="save_report"):
     
     content=st.session_state.rapport_medical
     
-    st.write(content)
     st.session_state.context=content
         
     user_query0="Hello world:)"
