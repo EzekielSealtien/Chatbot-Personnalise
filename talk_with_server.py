@@ -1,7 +1,7 @@
 import requests
 
 # Base URL for the FastAPI server
-BASE_URL = "https://calm-thicket-82645-76c53c6f1c73.herokuapp.com"
+BASE_URL = "https://chatbotbackend-c3894ac9dd9a.herokuapp.com"
 #BASE_URL = "http://localhost:8010"
 
 
