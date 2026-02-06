@@ -87,7 +87,7 @@ if "context" not in st.session_state:
 # File Upload and Report Input Section
 st.markdown("<div class='frame'>", unsafe_allow_html=True)
 
-file_uploaded = st.file_uploader("Téléverser votre document (Max size: 5MB)")
+file_uploaded = st.file_uploader("Téléverser votre document (Max size: 200KB )")
 rapport_medical = st.text_area("Entrer manuellement vos infos/documents:", value="", placeholder="Crée ton context...")
 
 # Process Text Input
@@ -96,10 +96,7 @@ if rapport_medical:
 
 # Process Uploaded File
 if file_uploaded:
-    if file_uploaded.size > 5 * 1024 * 1024:
-        st.error("The file exceeds the 5MB size limit. Please upload a smaller file.")
-    else:
-        st.session_state.rapport_medical = r_c.retrieve_content_file_uploaded(file_uploaded)
+    st.session_state.rapport_medical = r_c.retrieve_content_file_uploaded(file_uploaded)
 
 # Save Report Button
 
